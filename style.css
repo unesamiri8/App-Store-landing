@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+  font-family: "outfit", "sans-serif";
+}
+.logo {
+  grid-area: logo;
+}
+.login {
+  grid-area: login;
+}
+.create {
+  grid-area: create;
+  background-color: black;
+}
+.menu {
+  grid-area: menu;
+  place-self: center;
+}
+
+.nav {
+  display: grid;
+  gap: 5px;
+  grid-template:
+    ". logo . login create menu ." auto
+    / 5% 10% auto 5% 10% 5% 5%;
+  margin: 30px;
+  padding: 20px 0;
+  font-size: 30px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+button {
+  background-color: inherit;
+  border: 1px solid black;
+  border-radius: 99px;
+}
+.create a {
+  color: white;
+  padding: 10px 50px;
+}
+.login a {
+  padding: 10px 25px;
+}
+.mHeader {
+  grid-area: mHeader;
+  text-align: center;
+  font-size: 50px;
+}
+.middle {
+  display: grid;
+  grid-template:
+    "mHeader" 70%
+    "mSearch" 30%
+    / auto;
+  place-items: center;
+  height: 350px;
+}
+.mSearch {
+  grid-area: mSearch;
+  position: relative;
+}
+.msBox {
+  padding: 10px 400px 10px 50px;
+  border-radius: 99px;
+  border: 1px solid rgb(180, 180, 180);
+}
+.msIcon {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 15px;
+}
+.msSubmit {
+  padding: 10px 15px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border-radius: 99px;
+  border: 1px solid black;
+}
+.bigDown {
+  grid-area: bigDown;
+}
+.bigHead {
+  grid-area: bigHead;
+  font-size: 40px;
+  margin: 0;
+}
+.bigIcon {
+  grid-area: bigIcon;
+}
+.topLeft {
+  display: grid;
+  grid-template:
+    ". bigDown" 20%
+    "bigHead bigIcon" 80%
+    /70% 30%;
+  background-color: #f9d9e0;
+}
+.miniDown,
+.miniIcon,
+.bigDown,
+.bigIcon {
+  justify-self: end;
+}
+.miniIcon,
+.bigIcon {
+  align-self: end;
+}
+.miniDown {
+  grid-area: miniDown;
+}
+.miniHead {
+  grid-area: miniHead;
+  font-size: 30px;
+  margin: 0;
+}
+.miniIcon {
+  grid-area: miniIcon;
+}
+.bottom {
+  display: grid;
+  grid-template:
+    ". miniDown" 20%
+    "miniHead miniIcon" 80%
+    /50% 50%;
+  background-color: #6abfc8;
+  align-items: end;
+}
+
+.topLeft {
+  grid-area: topLeft;
+}
+.bottomLeft {
+  grid-area: bottomLeft;
+}
+.bottomRight {
+  grid-area: bottomRight;
+  background-color: #c7adef;
+}
+.rDown {
+  grid-area: rDown;
+  align-self: start;
+}
+.rHead {
+  grid-area: rHead;
+  justify-self: start;
+  font-size: 30px;
+  margin: 0;
+}
+.rIcon{grid-area: rIcon; color:white}
+.right{
+    grid-area: right;
+    display: grid;
+    grid-template:
+    ". rDown"30%
+    "rHead rIcon"70%
+    /70% 30% ;
+    place-items: end;
+    background-image: url(./vip.png);
+    background-position: center;
+    color:white;
+}
+
+.sections{
+    display: grid;
+    grid-template:
+    ". topLeft topLeft right . "50%
+    ". bottomLeft bottomRight right ."50%
+    /15% 20% 20% 30% 15%
+    ;
+    gap:10px
+}
+.sections div{
+    border-radius: 10px ;
+    padding:20px;
+
+}
+.sections div:hover{
+    opacity: 70%;
+}
+i{font-size: 30px;}
